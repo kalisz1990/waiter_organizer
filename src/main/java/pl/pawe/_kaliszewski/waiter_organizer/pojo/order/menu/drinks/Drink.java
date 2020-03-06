@@ -1,6 +1,14 @@
-package pl.pawe._kaliszewski.waiter_organizer.pojo.menu.drinks;
+package pl.pawe._kaliszewski.waiter_organizer.pojo.order.menu.drinks;
 
+import javax.persistence.*;
+
+@Entity
 public class Drink {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", updatable = false, nullable = false)
+    private Long id;
 
     private ColdDrinks coldDrinks;
 
